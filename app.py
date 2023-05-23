@@ -11,13 +11,14 @@ confidence_threshold = 0.65
 with open('style.css')as f:
  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
-st.markdown("<h1 style='text-align: center;'>Image Classification</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;color: #00f0e2'>Animal Classification</h1>", unsafe_allow_html=True)
 st.markdown(
     """
     <style>
     [data-testid="stAppViewContainer"] {
         color: Aliceblue;
-        background-image: linear-gradient(to bottom left, #3B2667,#BC78EC) !important;
+background: rgb(144,76,143);
+background: radial-gradient(circle, rgba(144,76,143,1) 0%, rgba(108,0,91,1) 34%);
     }
     
     [data-testid="stHeader"] {
@@ -53,7 +54,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-uploaded_file = st.file_uploader("Choose an Image", type=["jpg","png","jpeg"])
+uploaded_file = st.file_uploader("Choose an Image", type=["jpg","png","jpeg"],help="Upload an Image of the given format")
 
 map_dict = {0: 'dog',
             1: 'horse',
